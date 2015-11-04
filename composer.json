@@ -1,0 +1,14 @@
+{
+    "name": "ingowalther/image-minify-php-client",
+    "description": "PHP Implementation of Image Minify API",
+    "require": {
+        "guzzle/guzzle": "^3.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ingo Walther",
+            "email": "ingowalther@iwebspace.net"
+        }
+    ]
+}
