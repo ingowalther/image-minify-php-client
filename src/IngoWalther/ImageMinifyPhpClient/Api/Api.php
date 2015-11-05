@@ -2,13 +2,16 @@
 
 namespace IngoWalther\ImageMinifyPhpClient\Api;
 
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use IngoWalther\ImageMinifyPhpClient\Exception\ApiException;
 use IngoWalther\ImageMinifyPhpClient\Response\ResponseBuilder;
 use IngoWalther\ImageMinifyPhpClient\Response\CompressedImage;
 
+/**
+ * Class Api
+ * @package IngoWalther\ImageMinifyPhpClient\Api
+ */
 class Api
 {
     /**
@@ -21,6 +24,11 @@ class Api
      */
     private $apiKey;
 
+    /**
+     * Api constructor.
+     * @param $serverUrl
+     * @param $apiKey
+     */
     public function __construct($serverUrl, $apiKey)
     {
         $this->client = new Client(['base_uri' => $serverUrl]);
@@ -38,7 +46,13 @@ class Api
             $response = $this->makeMinifyRequest($imagePath);
             return $response;
         } catch (BadResponseException $e) {
-            throw new ApiException((string) $e->getResponse()->getBody());
+            $responseBody = $e->getResponse()->getBody()->getContents();
+
+            json_decode($responseBody);
+            if (json_last_error() == JSON_ERROR_NONE) {
+                throw new ApiException($responseBody);
+            }
+            throw $e;
         }
     }
 
