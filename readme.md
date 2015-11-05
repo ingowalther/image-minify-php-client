@@ -4,6 +4,12 @@ Basic PHP-Implementation of Image Minify API
 
 see https://github.com/ingowalther/image-minify-api
 
+## Installation
+
+```sh
+composer require ingowalther/image-minify-php-client
+```
+
 ## Usage
 
 ```php
