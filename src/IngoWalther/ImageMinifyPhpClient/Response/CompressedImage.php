@@ -22,5 +22,4 @@ class CompressedImage
      * @var string
      */
     public $binaryContent = '';
-
 }

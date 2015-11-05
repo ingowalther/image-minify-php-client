@@ -5,6 +5,7 @@ namespace IngoWalther\ImageMinifyPhpClient\Client;
 use IngoWalther\ImageMinifyPhpClient\Api\Api;
 use IngoWalther\ImageMinifyPhpClient\Image\Writer;
 use IngoWalther\ImageMinifyPhpClient\Response\CompressedImage;
+
 /**
  * Class ImageMinifyApiClient
  * @package IngoWalther\ImageMinifyPhpClient\Client
