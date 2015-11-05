@@ -2,7 +2,7 @@
     "name": "ingowalther/image-minify-php-client",
     "description": "PHP Implementation of Image Minify API",
     "require": {
-        "guzzle/guzzle": "^3.9"
+        "guzzlehttp/guzzle": "6.1.0"
     },
     "license": "MIT",
     "authors": [
@@ -10,5 +10,10 @@
             "name": "Ingo Walther",
             "email": "ingowalther@iwebspace.net"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "IngoWalther\\ImageMinifyPhpClient\\": "src/"
+        }
+    }
 }
