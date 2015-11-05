@@ -49,7 +49,7 @@ class Api
             $responseBody = $e->getResponse()->getBody()->getContents();
 
             json_decode($responseBody);
-            if (json_last_error() == JSON_ERROR_NONE) {
+            if (json_last_error() == JSON_ERROR_NONE && strlen($responseBody) > 0) {
                 throw new ApiException($responseBody);
             }
             throw $e;
