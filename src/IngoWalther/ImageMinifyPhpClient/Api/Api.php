@@ -74,7 +74,6 @@ class Api
                 ]
             ]
         ]);
-
         $responseBuilder = new ResponseBuilder();
         return $responseBuilder->buildResponse($response->getBody()->getContents());
     }

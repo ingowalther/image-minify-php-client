@@ -19,6 +19,11 @@ class CompressedImage
     public $newSize = 0;
 
     /**
+     * @var int
+     */
+    public $saving = 0;
+
+    /**
      * @var string
      */
     public $binaryContent = '';

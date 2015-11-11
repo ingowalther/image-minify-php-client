@@ -19,6 +19,7 @@ class ResponseBuilder
         $compressedImage = new CompressedImage();
         $compressedImage->newSize = $data->newSize;
         $compressedImage->oldSize = $data->oldSize;
+        $compressedImage->saving = $data->saving;
         $compressedImage->binaryContent = base64_decode($data->image);
 
         return $compressedImage;
