@@ -34,6 +34,9 @@ $oldSize = $compressedImage->oldSize;
 // The size after compression
 $newSize = $compressedImage->newSize;
 
+// The saving in percent
+$saving = $compressedImage->saving;
+
 // The binary-content of the compressed image
 $binaryContent = $compressedImage->binaryContent;
 ```
